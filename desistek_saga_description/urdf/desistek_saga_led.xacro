@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+<!-- Right LED -->
+  <xacro:led_macro
+    namespace="${namespace}"
+    prefix="right"
+    parent_link="${namespace}/base_link">
+    <origin xyz="0.2 -0.1192 0.0" rpy="0 0 0"/>
+  </xacro:led_macro>
+<!-- Left LED -->
+  <xacro:led_macro
+    namespace="${namespace}"
+    parent_link="${namespace}/base_link"
+    prefix="left">
+    <origin xyz="0.2 0.1192 0.0" rpy="0 0 0"/>
+  </xacro:led_macro>
+</robot>
+

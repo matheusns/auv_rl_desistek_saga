@@ -30,4 +30,64 @@
     </xacro:thruster_module_first_order_basic_fcn_macro>
   </xacro:macro>
 
+  <xacro:macro name="led_macro"
+    params="namespace prefix parent_link *origin">
+    <!-- LED link -->
+    <link name="${namespace}/${prefix}_LED_link">
+      <!-- <light name='lamp' type='spot'>
+        <pose>0 0 0.0 0 3.14159 0</pose>
+        <attenuation>
+          <range>30</range>
+          <linear>0.05</linear>
+        </attenuation>
+        <diffuse>0.5 1 1 1</diffuse>
+        <specular>1 1 1 1</specular>
+        <spot>
+          <inner_angle>0.3</inner_angle>
+          <outer_angle>0.35</outer_angle>
+          <falloff>1</falloff>
+        </spot>
+        <direction>0 0 -1</direction>
+      </light> -->
+    <visual name='lamp_visual'>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </visual>
+  </link>
+
+      <joint name="${namespace}/${prefix}_LED_joint" type="fixed">
+        <xacro:insert_block name="origin" />
+        <parent link="${parent_link}" />
+        <child link="${namespace}/${prefix}_LED_link" />
+      </joint>
+
+    <gazebo reference="${namespace}/${prefix}_LED_link">
+      <visual>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <emissive>0 1 0 1</emissive>
+        </material>
+      </visual>
+      <light name ='${namespace}/${prefix}_LED_link/lamp' type = 'point'>
+      <!-- Investigate the lamp pose -->
+      <!-- Understand if it is a relative or absolute position -->
+      <!-- The light is carried with the robot, so, it should be relative -->
+        <pose>0 0 0 0 0 0</pose>
+      </light>
+      <plugin name='light_control' filename='libFlashLightPlugin.so'>
+        <enable>true</enable>
+        <light>
+          <id>${namespace}/${prefix}_LED_link/lamp</id>
+          <duration>0.3</duration>
+          <interval>0.4</interval>
+          <color>0.1 1 0.1</color>
+          <enable>true</enable>
+        </light>
+      </plugin>
+      <selfCollide>false</selfCollide>
+    </gazebo>
+  </xacro:macro>
 </robot>

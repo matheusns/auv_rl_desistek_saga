@@ -105,7 +105,6 @@
 
     <xacro:include filename="$(find desistek_saga_description)/urdf/desistek_saga_thrusters.xacro"/>
     <xacro:include filename="$(find desistek_saga_description)/urdf/desistek_saga_sensors.xacro"/>
-
-  </xacro:macro>
-
+    <xacro:include filename="$(find desistek_saga_description)/urdf/desistek_saga_led.xacro"/>
+</xacro:macro>
 </robot>
