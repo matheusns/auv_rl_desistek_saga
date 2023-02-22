@@ -53,9 +53,4 @@
           <arg name="gain_z" default="0.2"/>
       </include>
     </group>
-
-    <group if="$(arg gui_on)">
-      <!-- Start RViz  -->
-      <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find desistek_saga_control)/rviz/desistek_saga_control.rviz"/>
-    </group>
 </launch>

@@ -1,0 +1,42 @@
+<launch>
+  <arg name="namespace" default="desistek_saga"/>
+<!-- Vehicle's initial position -->
+  <arg name="x" default="1"/>
+  <arg name="y" default="22"/>
+  <arg name="z" default="-92"/>
+  <arg name="yaw" default="0"/>
+<!-- Simulation env parameters -->
+  <arg name="paused" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="set_timeout" default="false"/>
+  <arg name="gui_on" default="true"/>
+  <arg name="timeout" default="0.0"/>
+
+<!-- Load the auv description file to the gazebo -->
+  <include file="$(find desistek_saga_description)/launch/upload_desistek_saga.launch">
+    <arg name="x" value="$(arg x)"/>
+    <arg name="y" value="$(arg y)"/>
+    <arg name="z" value="$(arg z)"/>
+    <arg name="yaw" value="$(arg yaw)"/>
+  </include>
+
+<!-- Load the controller stack -->
+  <include file="$(find desistek_saga_control)/launch/start_thruster_manager.launch">
+      <arg name="uuv_name" value="$(arg namespace)"/>
+  </include>
+
+   <group ns="$(arg namespace)">
+        <rosparam file="$(find desistek_saga_control)/config/inertial.yaml" command="load"/>
+        <rosparam file="$(find desistek_saga_control)/config/vel_pid_control.yaml" command="load"/>
+
+        <node pkg="uuv_control_cascaded_pid" type="AccelerationControl.py" name="acceleration_control"
+            output="screen">
+            <param name="tf_prefix" type="string" value="$(arg namespace)/" />
+        </node>
+
+        <node pkg="uuv_control_cascaded_pid" type="VelocityControl.py" name="velocity_control"
+            output="screen">
+            <remap from="odom" to="pose_gt"/>
+        </node>
+    </group>
+</launch>
