@@ -9,8 +9,8 @@ Panels:
         - /RobotModel1
         - /TF1
         - /TF1/Frames1
-      Splitter Ratio: 0.5
-    Tree Height: 683
+      Splitter Ratio: 0.637982189655304
+    Tree Height: 277
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -58,24 +58,87 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: false
+      Enabled: true
       Links:
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        desistek_saga/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        desistek_saga/camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        desistek_saga/camera_link_optical:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        desistek_saga/cc_sensor_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        desistek_saga/gps_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        desistek_saga/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        desistek_saga/left_LED_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        desistek_saga/pose_sensor_link_default:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        desistek_saga/right_LED_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        desistek_saga/sonar_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        desistek_saga/thruster_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        desistek_saga/thruster_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        desistek_saga/thruster_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: desistek_saga/robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: false
+      Value: true
       Visual Enabled: true
     - Class: rviz/TF
       Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        april_tag_cage_bundle:
+          Value: false
         cage_docking:
           Value: false
         cage_docking_gt:
@@ -85,7 +148,7 @@ Visualization Manager:
         desistek_saga/base_footprint:
           Value: false
         desistek_saga/base_link:
-          Value: false
+          Value: true
         desistek_saga/base_link_ned:
           Value: false
         desistek_saga/base_stabilized:
@@ -114,15 +177,27 @@ Visualization Manager:
           Value: false
         desistek_saga/thruster_2:
           Value: false
-        fiducial_0:
-          Value: false
-        fiducial_4:
-          Value: false
-        fiducial_5:
-          Value: false
-        fiducial_710:
+        tag_0:
           Value: true
-        tf_test_00:
+        tag_1:
+          Value: true
+        tag_10:
+          Value: true
+        tag_2:
+          Value: true
+        tag_3:
+          Value: true
+        tag_4:
+          Value: true
+        tag_5:
+          Value: true
+        tag_6:
+          Value: true
+        tag_7:
+          Value: true
+        tag_8:
+          Value: true
+        tag_9:
           Value: true
         world:
           Value: false
@@ -138,8 +213,6 @@ Visualization Manager:
           cage_link:
             cage_docking_gt:
               {}
-            tf_test_00:
-              {}
           desistek_saga/base_footprint:
             desistek_saga/base_stabilized:
               desistek_saga/base_link:
@@ -147,14 +220,30 @@ Visualization Manager:
                   {}
                 desistek_saga/camera_link:
                   desistek_saga/camera_link_optical:
-                    fiducial_0:
+                    april_tag_cage_bundle:
                       cage_docking:
                         {}
-                    fiducial_4:
+                    tag_0:
                       {}
-                    fiducial_5:
+                    tag_1:
                       {}
-                    fiducial_710:
+                    tag_10:
+                      {}
+                    tag_2:
+                      {}
+                    tag_3:
+                      {}
+                    tag_4:
+                      {}
+                    tag_5:
+                      {}
+                    tag_6:
+                      {}
+                    tag_7:
+                      {}
+                    tag_8:
+                      {}
+                    tag_9:
                       {}
                 desistek_saga/cc_sensor_link:
                   {}
@@ -285,8 +374,56 @@ Visualization Manager:
       Unreliable: false
       Value: true
     - Class: rviz/Image
-      Enabled: true
+      Enabled: false
       Image Topic: /desistek_saga/desistek_saga/camera/camera_image
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: false
+    - Class: rviz/Image
+      Enabled: false
+      Image Topic: /tag_detections_image
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: false
+    - Class: rviz/Image
+      Enabled: false
+      Image Topic: /tag_detections_image
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: false
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /tag_detections_image
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /rect
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -324,35 +461,35 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.448880434036255
+      Distance: 7.242644786834717
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 2.4085865020751953
-        Y: -0.25520646572113037
-        Z: -0.08199711889028549
+        X: 1.4887293577194214
+        Y: 1.0528029203414917
+        Z: -0.12094759941101074
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.9403989315032959
+      Pitch: 0.5803989768028259
       Target Frame: desistek_saga/base_link
       Value: Orbit (rviz)
-      Yaw: 3.5749423503875732
+      Yaw: 4.724948883056641
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: false
-  Height: 1414
-  Hide Left Dock: false
+    collapsed: true
+  Height: 934
+  Hide Left Dock: true
   Hide Right Dock: false
   Image:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001e5000004f9fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000004e00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007301000000310000032f000000a600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d0061006700650100000365000001c50000001600ffffff000000010000010f000004f9fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730100000031000004f90000008c00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e1000001970000000300000d700000003efc0100000002fb0000000800540069006d0065010000000000000d70000001ef00fffffffb0000000800540069006d0065010000000000000450000000000000000000000a72000004f900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000015300000199fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000004e00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003100000199000000a600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d0061006700650000000362000001c20000001600fffffffb0000000a0049006d006100670065000000044c000000d80000001600ffffff00000001000002bb000004f4fc0200000004fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000034000004130000008c00fffffffb0000000a0049006d0061006700650200000e21000001c200000280000001e0fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e1000001970000000300000438000001befc0100000003fc0000000000000229000001ef00fffffffa000000000200000002fb0000000a0049006d0061006700650100000000ffffffff0000001600fffffffb0000000800540069006d0065010000052a0000003e0000003600fffffffb0000000a0049006d006100670065010000022e0000020a0000005200fffffffb0000000800540069006d00650100000000000004500000000000000000000004380000019900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -361,6 +498,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 3440
-  X: 0
-  Y: 240
+  Width: 1080
+  X: 3440
+  Y: 0
