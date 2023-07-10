@@ -5,12 +5,6 @@
   <arg name="y" default="22"/>
   <arg name="z" default="-92"/>
   <arg name="yaw" default="0"/>
-<!-- Simulation env parameters -->
-  <arg name="paused" default="false"/>
-  <arg name="gui" default="true"/>
-  <arg name="set_timeout" default="false"/>
-  <arg name="gui_on" default="true"/>
-  <arg name="timeout" default="0.0"/>
 
 <!-- Load the auv description file to the gazebo -->
   <include file="$(find desistek_saga_description)/launch/upload_desistek_saga.launch">
