@@ -10,7 +10,7 @@ Panels:
         - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.637982189655304
-    Tree Height: 277
+    Tree Height: 1227
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -58,93 +58,38 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: true
+      Enabled: false
       Links:
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        desistek_saga/base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        desistek_saga/camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        desistek_saga/camera_link_optical:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        desistek_saga/cc_sensor_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        desistek_saga/gps_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        desistek_saga/imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        desistek_saga/left_LED_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        desistek_saga/pose_sensor_link_default:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        desistek_saga/right_LED_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        desistek_saga/sonar_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        desistek_saga/thruster_0:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        desistek_saga/thruster_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        desistek_saga/thruster_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: RobotModel
       Robot Description: desistek_saga/robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: true
+      Value: false
       Visual Enabled: true
     - Class: rviz/TF
       Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        april_tag_cage_bundle:
+        cage_docking_0:
+          Value: true
+        cage_docking_1:
+          Value: true
+        cage_docking_2:
           Value: false
-        cage_docking:
+        cage_docking_3:
           Value: false
         cage_docking_gt:
           Value: false
         cage_link:
-          Value: true
+          Value: false
         desistek_saga/base_footprint:
           Value: false
         desistek_saga/base_link:
@@ -156,7 +101,7 @@ Visualization Manager:
         desistek_saga/camera_link:
           Value: false
         desistek_saga/camera_link_optical:
-          Value: true
+          Value: false
         desistek_saga/cc_sensor_link:
           Value: false
         desistek_saga/gps_link:
@@ -177,11 +122,23 @@ Visualization Manager:
           Value: false
         desistek_saga/thruster_2:
           Value: false
+        front_bundle:
+          Value: false
+        left_bundle:
+          Value: false
+        rear_bundle:
+          Value: false
+        right_bundle:
+          Value: false
         tag_0:
           Value: true
         tag_1:
           Value: true
         tag_10:
+          Value: true
+        tag_11:
+          Value: true
+        tag_12:
           Value: true
         tag_2:
           Value: true
@@ -209,6 +166,12 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
+        left_bundle:
+          cage_docking_2:
+            {}
+        rear_bundle:
+          cage_docking_3:
+            {}
         world:
           cage_link:
             cage_docking_gt:
@@ -220,14 +183,21 @@ Visualization Manager:
                   {}
                 desistek_saga/camera_link:
                   desistek_saga/camera_link_optical:
-                    april_tag_cage_bundle:
-                      cage_docking:
+                    front_bundle:
+                      cage_docking_0:
+                        {}
+                    right_bundle:
+                      cage_docking_1:
                         {}
                     tag_0:
                       {}
                     tag_1:
                       {}
                     tag_10:
+                      {}
+                    tag_11:
+                      {}
+                    tag_12:
                       {}
                     tag_2:
                       {}
@@ -422,7 +392,7 @@ Visualization Manager:
       Unreliable: false
       Value: true
     - Class: rviz/Image
-      Enabled: true
+      Enabled: false
       Image Topic: /rect
       Max Value: 1
       Median window: 5
@@ -432,7 +402,7 @@ Visualization Manager:
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -461,35 +431,35 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 7.242644786834717
+      Distance: 0.6649506092071533
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.4887293577194214
-        Y: 1.0528029203414917
-        Z: -0.12094759941101074
+        X: -5.721395969390869
+        Y: -1.111024022102356
+        Z: 2.3628106117248535
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5803989768028259
+      Pitch: 0.15039974451065063
       Target Frame: desistek_saga/base_link
       Value: Orbit (rviz)
-      Yaw: 4.724948883056641
+      Yaw: 3.306779384613037
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: true
-  Height: 934
-  Hide Left Dock: true
+    collapsed: false
+  Height: 1889
+  Hide Left Dock: false
   Hide Right Dock: false
   Image:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000015300000199fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000004e00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003100000199000000a600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d0061006700650000000362000001c20000001600fffffffb0000000a0049006d006100670065000000044c000000d80000001600ffffff00000001000002bb000004f4fc0200000004fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000034000004130000008c00fffffffb0000000a0049006d0061006700650200000e21000001c200000280000001e0fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e1000001970000000300000438000001befc0100000003fc0000000000000229000001ef00fffffffa000000000200000002fb0000000a0049006d0061006700650100000000ffffffff0000001600fffffffb0000000800540069006d0065010000052a0000003e0000003600fffffffb0000000a0049006d006100670065010000022e0000020a0000005200fffffffb0000000800540069006d00650100000000000004500000000000000000000004380000019900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000015300000550fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005700fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003400000550000000b900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d0061006700650000000362000001c20000001600fffffffb0000000a0049006d006100670065000000044c000000d80000001600ffffff00000001000002bb000004f4fc0200000004fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000034000004130000009600fffffffb0000000a0049006d0061006700650200000e21000001c200000280000001e0fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000043e000001befc0100000003fc00000000000003e40000000000fffffffaffffffff0200000002fb0000000a0049006d0061006700650000000000ffffffff0000001600fffffffb0000000800540069006d0065000000052a0000003e0000003600fffffffb0000000a0049006d00610067006501000000000000043e0000005500fffffffb0000000800540069006d00650100000000000004500000000000000000000002e60000055000000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -498,6 +468,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1080
+  Width: 1086
   X: 3440
   Y: 0
